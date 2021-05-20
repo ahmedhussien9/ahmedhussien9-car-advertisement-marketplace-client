@@ -1,0 +1,12 @@
+{
+  "name": "NovaLabApp",
+  "displayName": "NovaLabApp",
+  "expo": {
+    "name": "NovaLabApp",
+    "slug": "NovaLabApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
