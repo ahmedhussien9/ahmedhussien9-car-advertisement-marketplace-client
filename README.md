@@ -52,7 +52,7 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
       $ npm install -g yarn
 
 ### React Native
- Please checkout the react native document to be able to install the environement setup
+ Please checkout the react native document to be able to install the environement setup https://reactnative.dev/docs/environment-setup
 
 ---
 
@@ -66,7 +66,9 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 ## Running the project
 
     $ react-native start
-    
+    $ react-native run-android
+   
+Make sure that you have android stuido to open the app on the simulator
 
 ## Backend  
 
