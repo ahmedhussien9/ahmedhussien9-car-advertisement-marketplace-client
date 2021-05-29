@@ -11,6 +11,7 @@ import { SIZES, COLORS, FONTS } from "../constants";
 import Input from "../components/Inputs";
 import Submit from "../components/Submit";
 import Toast from "react-native-toast-message";
+import { config } from "../config";
 
 const SignUp = (props) => {
   const [formState, setFormState] = useState({
@@ -29,21 +30,15 @@ const SignUp = (props) => {
   };
 
   const onSubmit = () => {
-    if (
-      !formState.confirmPassword ||
-      !formState.email ||
-      !formState.password ||
-      formState.fullName
-    ) {
-      return;
-    }
+    console.log("hey");
+
     setLoaderState(true);
     if (formState.password !== formState.confirmPassword) {
       setFormState(false);
       alert("Please make sure that you entered same password");
       return;
     }
-    fetch("http://192.168.1.7:4000/users/signup", {
+    fetch(`${config.baseUrl}users/signup`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -64,14 +59,11 @@ const SignUp = (props) => {
           topOffset: 20,
           bottomOffset: 40,
           onShow: () => {
-            setFormState(false);
-          },
-          onHide: () => {
+            setLoaderState(false);
             props.navigation.navigate("Login");
           },
-          onPress: () => {
-            props.navigation.navigate("Login");
-          },
+          onHide: () => {},
+          onPress: () => {},
         });
       });
   };

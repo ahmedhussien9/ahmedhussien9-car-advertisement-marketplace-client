@@ -31,7 +31,6 @@ const Advertisement = ({ navigation }) => {
   };
 
   async function fetchData(sellerFullName = "") {
-    console.log(sellerFullName);
     try {
       const response = await fetch(
         `${config.baseUrl}items?seller=${sellerFullName}`

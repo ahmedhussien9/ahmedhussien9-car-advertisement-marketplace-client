@@ -4,6 +4,7 @@ import { SIZES, COLORS, FONTS } from "../constants";
 import Inputs from "../components/Inputs";
 import Submit from "../components/Submit";
 import Toast from "react-native-toast-message";
+import { config } from "../config";
 
 const Login = (props) => {
   const [formState, setFormState] = useState({
@@ -24,11 +25,8 @@ const Login = (props) => {
   };
 
   const onSubmit = () => {
-    if (!formState.email || !formState.password) {
-      return;
-    }
     setLoaderState(true);
-    fetch("http://192.168.1.7:4000/users/login", {
+    fetch(`${config.baseUrl}users/login`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -52,26 +50,22 @@ const Login = (props) => {
         });
       })
       .then((response) => {
-        console.log(response);
         Toast.show({
           type: "success",
           position: "top",
-          text1: `Welcome Back, ${response.fullName}`,
+          text1: `Welcome Back, ${response.body.fullName}`,
           visibilityTime: 4000,
           autoHide: true,
           topOffset: 20,
           bottomOffset: 40,
           onShow: () => {
             props.navigation.navigate("Advertisement");
+            setLoaderState(false);
           },
           onHide: () => {
-            setLoaderState(false);
-            setFormState();
             props.navigation.navigate("Advertisement");
           },
           onPress: () => {
-            setLoaderState(false);
-            resetForm();
             props.navigation.navigate("Advertisement");
           },
         });

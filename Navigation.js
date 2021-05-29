@@ -21,7 +21,7 @@ const Navigation = (props) => {
         translucent={false}
       />
       <Stack.Navigator
-        initialRouteName={"Advertisement"}
+        initialRouteName={"Login"}
         screenOptions={{
           headerStyle: { elevation: 0 },
           cardStyle: { backgroundColor: COLORS.white },
