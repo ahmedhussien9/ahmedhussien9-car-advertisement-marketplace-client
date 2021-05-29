@@ -52,23 +52,24 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
       $ npm install -g yarn
 
 ### React Native
+ Please checkout the react native document to be able to install the environement setup
 
 ---
 
 ## Install
 
-    $ git clone https://github.com/ahmedhussien9/car-advertisement-marketplace-server.git
-    $ cd car-advertisement-marketplace-server
+    $ git clone https://github.com/ahmedhussien9/car-advertisement-marketplace-client.git
+    $ cd car-advertisement-marketplace-client
     $ yarn install or npm install
 
 
 ## Running the project
 
-    $ nodemon
+    $ react-native start
     
-The server should be running at http//:localhost:4000
 
-## Api's Collection 
+## Backend  
 
-To get the backend API collection you should import this URL into postman https://www.getpostman.com/collections/269fdf7ddfb3fb00a41c
+Make sure to clone the backend side and run it locallay to be able accessing the database from this repo https://github.com/ahmedhussien9/car-advertisement-marketplace-server
+
 
