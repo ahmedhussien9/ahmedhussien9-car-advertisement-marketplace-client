@@ -79,8 +79,10 @@ const CarDetails = ({ navigation, route }) => {
     try {
       const response = await fetch(`${config.baseUrl}timeslot/${sellerId}`);
       const json = await response.json();
-      console.log(json);
-      const slots = json.body.slots.slice(0, -1);
+      let slots;
+      if (json.body.slots) {
+        slots = json.body.slots.slice(0, -1);
+      }
       setSlots(slots);
     } catch (e) {
       console.error(e);
@@ -150,8 +152,8 @@ const CarDetails = ({ navigation, route }) => {
           source={{ uri: carData.image }}
           style={{
             resizeMode: "contain",
-            width: 300,
-            height: 150,
+            width: 400,
+            height: 200,
           }}
         />
       </View>
