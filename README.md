@@ -3,9 +3,13 @@
 Car Advertisments marketplace is a mobile app developed using react native this app constits of 5 screens as below: 
 
 1- Login (Screen that will help buyers to login).
+
 2- Sign up (Screen that will help buyers to register on our app).
+
 3- Advertisments (Screen that will show all the sellers car ads).
+
 4- AdvertismentsDetails (Screen that will show the car ad details).
+
 5- Book Apponitment panel (Screen that will show all the avalible time slots for each seller).
 
 ---
@@ -47,7 +51,7 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
       $ npm install -g yarn
 
-- #### React Native
+### React Native
 
 ---
 
